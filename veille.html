@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veille technologique de Laurent DUCOMMUN - Cybersécurité et Intelligence Artificielle">
+    <title>Veille Technologique | Laurent DUCOMMUN</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+
+<body>
+
+<header>
+    <nav class="container navbar">
+        <h2 class="logo-text">Laurent</h2>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="veille.html" class="active">Veille</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+            <i class="fas fa-moon"></i>
+        </button>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="portfolio-header">
+        <h1>Veille Technologique</h1>
+        <p>Actualités cybersécurité et intelligence artificielle - Mise à jour automatique via flux RSS</p>
+    </section>
+
+    <!-- EXPLICATION -->
+    <section class="experience-card fade-in">
+        <h3>📡 Comment fonctionne cette veille ?</h3>
+        
+        <p>
+        Cette page utilise des <strong>flux RSS</strong> pour récupérer automatiquement les dernières actualités 
+        de sources fiables en cybersécurité et intelligence artificielle. Les articles sont mis à jour 
+        régulièrement sans intervention manuelle.
+        </p>
+
+        <div class="company-details">
+            <h4>🔍 Sources utilisées</h4>
+            <div class="sources-grid">
+                <div class="source-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <strong>Cybersécurité</strong>
+                    <span>Portails RGPD, Cyberhoot, Zataz, UnderNews, Le Monde Informatique</span>
+                </div>
+                <div class="source-item">
+                    <i class="fas fa-robot"></i>
+                    <strong>Intelligence Artificielle</strong>
+                    <span>Actualités IA, TechCrunch AI, MIT Technology Review</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="company-details">
+            <h4>⚙️ Technologies utilisées</h4>
+            <div class="tech-grid">
+                <span class="tech-tag">RSS 2.0</span>
+                <span class="tech-tag">JavaScript Fetch API</span>
+                <span class="tech-tag">rss2json.com API</span>
+                <span class="tech-tag">DOM Manipulation</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- FILTRES -->
+    <section class="experience-card fade-in">
+        <h3>🎯 Filtrer par catégorie</h3>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">
+                <i class="fas fa-globe"></i> Tout
+            </button>
+            <button class="filter-btn" data-filter="cybersecurite">
+                <i class="fas fa-shield-alt"></i> Cybersécurité
+            </button>
+            <button class="filter-btn" data-filter="ia">
+                <i class="fas fa-robot"></i> Intelligence Artificielle
+            </button>
+        </div>
+    </section>
+
+    <!-- CYBERSECURITE -->
+    <section class="feed-section fade-in" data-category="cybersecurite">
+        <h3 class="section-title">
+            <i class="fas fa-shield-alt"></i> Actualités Cybersécurité
+        </h3>
+        <div class="rss-feed" id="cybersecurite-feed">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Chargement des actualités...
+            </div>
+        </div>
+        <div class="feed-sources">
+            <small>Sources : Portail RGPD, UnderNews, Le Monde Informatique, Zataz</small>
+        </div>
+    </section>
+
+    <!-- IA -->
+    <section class="feed-section fade-in" data-category="ia">
+        <h3 class="section-title">
+            <i class="fas fa-robot"></i> Actualités Intelligence Artificielle
+        </h3>
+        <div class="rss-feed" id="ia-feed">
+            <div class="loading">
+                <i class="fas fa-spinner fa-spin"></i> Chargement des actualités...
+            </div>
+        </div>
+        <div class="feed-sources">
+            <small>Sources : MIT Technology Review, TechCrunch AI, Journal du AI</small>
+        </div>
+    </section>
+    
+    <!-- ARTICLES COMMENTES -->
+    <section class="experience-card fade-in">
+        <h3>💡 Articles commentés (analyses persionnelles)</h3>
+        
+        <p>
+        En plus de la veille automatisée, j'analyse et commente régulièrement les articles 
+        qui me semblent les plus pertinents pour mon futur métier.
+        </p>
+
+        <!-- Article example -->
+        <div class="company-details">
+            <h4>📌 Article analysé : Ransomware - Menace évoluée</h4>
+            <p>
+            <strong>Source :</strong> ANSSI<br>
+            <strong>Date :</strong> Janvier 2026
+            </p>
+            <p>
+            <strong>Mon analyse :</strong><br>
+            Les ransomwares sont devenus une industrie organisée avec des modèles 
+            "Ransomware-as-a-Service" (RaaS). Les groupes comme LockBit (démantelé en 2024) 
+            et BlackCat/ALPHV continuent d'opérer. La meilleure défense reste la prévention 
+            : sauvegardes régulières, MFA, et sensibilisation des utilisateurs.
+            </p>
+            <p>
+            <strong>Impact sur mon métier (SISR) :</strong>
+            </p>
+            <ul>
+                <li>Implémenter la règle 3-2-1 pour les sauvegardes</li>
+                <li>Configurer le MFA sur tous les accès distants</li>
+                <li>Documenter les procédures de réponse aux incidents</li>
+            </ul>
+            <p>
+            <strong>Technologies utilisées :</strong>
+            <span class="tech-tag">Windows Server Backup</span>
+            <span class="tech-tag">Azure AD</span>
+            <span class="tech-tag">Microsoft Sentinel</span>
+            </p>
+        </div>
+
+        <div class="company-details">
+            <h4>📌 Article analysé : IA Générative et Développement</h4>
+            <p>
+            <strong>Source :</strong> GitHub Next<br>
+            <strong>Date :</strong> Mars 2026
+            </p>
+            <p>
+            <strong>Mon analyse :</strong><br>
+            L'IA générative (GitHub Copilot, ChatGPT) transforme le métier de développeur. 
+            Elle permet un gain de productivité significatif mais nécessite un regard critique 
+            : le code généré doit toujours être vérifié et sécurisé.
+            </p>
+            <p>
+            <strong>Impact sur mon parcours (SLAM) :</strong>
+            </p>
+            <ul>
+                <li>Utilisation de Copilot pour accélérer le développement</li>
+                <li>Apprentissage des nouveaux frameworks via l'IA</li>
+                <li>Sensibilisation aux questions éthiques et de propriété intellectuelle</li>
+            </ul>
+            <p>
+            <strong>Technologies utilisées :</strong>
+            <span class="tech-tag">GitHub Copilot</span>
+            <span class="tech-tag">ChatGPT</span>
+            <span class="tech-tag">VS Code</span>
+            </p>
+        </div>
+    </section>
+
+</main>
+
+<!-- RSS FEED SCRIPT -->
+<script>
+// Configuration des flux RSS
+const rssFeeds = {
+    cybersecurite: [
+        {
+            url: 'https://feeds.feedburner.com/UnderNews',
+            name: 'UnderNews'
+        },
+        {
+            url: 'https://www.lemondeinformatique.fr/flux-rss/ressources/securite/rss.xml',
+            name: 'Le Monde Informatique'
+        },
+        {
+            url: 'https://www.zataz.com/feed/',
+            name: 'Zataz'
+        }
+    ],
+    ia: [
+        {
+            url: 'https://www.technologyreview.com/feed/',
+            name: 'MIT Tech Review'
+        },
+        {
+            url: 'https://techcrunch.com/category/artificial-intelligence/feed/',
+            name: 'TechCrunch AI'
+        },
+        {
+            url: 'https://avenuedelia.com/fr/actu/rss/',
+            name: 'Avenue Délia'
+        },
+        {
+            url: 'https://www.marktechpost.com/feed/',
+            name: 'MarkTechPost'
+        },
+        {
+            url: 'https://roia.centre-mersenne.org/fr/latest/feed/roia/',
+            name: 'Revue IA'
+        }
+    ]
+};
+
+// Fonction pour charger un flux RSS via allorigins.win
+async function loadRSSFeed(containerId, feeds) {
+    const container = document.getElementById(containerId);
+
+    try {
+        let allItems = [];
+
+        const promises = feeds.map(feed => {
+            const apiUrl = `https://api.allorigins.win/get?url=${encodeURIComponent(feed.url)}`;
+            return fetch(apiUrl)
+                .then(res => res.json())
+                .then(data => {
+                    const parser = new DOMParser();
+                    const xml = parser.parseFromString(data.contents, "text/xml");
+                    const items = xml.querySelectorAll("item");
+
+                    return Array.from(items).slice(0, 5).map(item => ({
+                        title: item.querySelector("title")?.textContent,
+                        link: item.querySelector("link")?.textContent,
+                        pubDate: item.querySelector("pubDate")?.textContent,
+                        description: item.querySelector("description")?.textContent,
+                        source: feed.name
+                    }));
+                })
+                .catch(() => []);
+        });
+
+        const results = await Promise.all(promises);
+        results.forEach(r => allItems.push(...r));
+
+        // Trier
+        allItems.sort((a, b) => new Date(b.pubDate) - new Date(a.pubDate));
+
+        // Limite
+        allItems = allItems.slice(0, 10);
+
+        if (allItems.length === 0) {
+            container.innerHTML = "<p>Aucune actualité disponible.</p>";
+            return;
+        }
+
+        let html = '<div class="articles-grid">';
+        allItems.forEach(item => {
+            const date = new Date(item.pubDate);
+            const dateStr = date.toLocaleDateString("fr-FR");
+
+            let description = item.description || "";
+            description = description.replace(/<[^>]*>/g, "");
+            description = description.substring(0, 120) + "...";
+
+            html += `
+                <article class="rss-article">
+                    <span>${item.source}</span>
+                    <h4><a href="${item.link}" target="_blank">${item.title}</a></h4>
+                    <p>${description}</p>
+                    <small>${dateStr}</small>
+                </article>
+            `;
+        });
+
+        html += "</div>";
+        container.innerHTML = html;
+
+    } catch (error) {
+        console.error(error);
+        container.innerHTML = "<p>Erreur de chargement</p>";
+    }
+}
+
+// Filtrage des sections
+document.addEventListener('DOMContentLoaded', () => {
+    // Charger les flux RSS
+    loadRSSFeed('cybersecurite-feed', rssFeeds.cybersecurite);
+    loadRSSFeed('ia-feed', rssFeeds.ia);
+    
+    // Filtrage par catégorie
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const feedSections = document.querySelectorAll('.feed-section');
+    
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Mettre à jour les boutons actifs
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            const filter = button.dataset.filter;
+            
+            // Filtrer les sections
+            feedSections.forEach(section => {
+                if (filter === 'all') {
+                    section.style.display = 'block';
+                } else if (section.dataset.category === filter) {
+                    section.style.display = 'block';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
+// Fallback si rss2json ne fonctionne pas
+setTimeout(() => {
+    const csFeed = document.getElementById('cybersecurite-feed');
+    const iaFeed = document.getElementById('ia-feed');
+    
+    if (csFeed && csFeed.querySelector('.loading')) {
+        csFeed.innerHTML = `
+            <div class="fallback-message">
+                <p><i class="fas fa-info-circle"></i> Les flux RSS utilisent un service externe. 
+                Si les actualités ne chargent pas, vérifiez votre connexion.</p>
+                <div class="manual-links">
+                    <p>Liens directs vers les sources :</p>
+                    <ul>
+                        <li><a href="https://undernews.info" target="_blank">UnderNews</a></li>
+                        <li><a href="https://www.zataz.com" target="_blank">Zataz</a></li>
+                        <li><a href="https://www.lemondeinformatique.fr" target="_blank">Le Monde Informatique</a></li>
+                    </ul>
+                </div>
+            </div>
+        `;
+    }
+    
+    if (iaFeed && iaFeed.querySelector('.loading')) {
+        iaFeed.innerHTML = `
+            <div class="fallback-message">
+                <p><i class="fas fa-info-circle"></i> Les flux RSS utilisent un service externe.</p>
+                <div class="manual-links">
+                    <p>Liens directs vers les sources :</p>
+                    <ul>
+                        <li><a href="https://www.technologyreview.com" target="_blank">MIT Technology Review</a></li>
+                        <li><a href="https://techcrunch.com/category/artificial-intelligence/" target="_blank">TechCrunch AI</a></li>
+                    </ul>
+                </div>
+            </div>
+        `;
+    }
+}, 5000);
+</script>
+
+<!-- FADE IN -->
+<script src="script.js"></script>
+
+<!-- BACK ON TOP -->
+<button id="backToTop">⬆</button>
+
+</body>
+</html>
